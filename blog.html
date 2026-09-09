@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+---
+
+<div style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+  <header style="margin-bottom: 40px;">
+    <h1 style="font-size: 2.5em; margin-bottom: 10px;">My Blog</h1>
+    <a href="{{ site.baseurl }}/" style="text-decoration: none; color: #0076df;">← Back to Resume</a>
+  </header>
+
+  <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 30px;">
+
+  <ul style="list-style: none; padding-left: 0;">
+    {% for post in site.posts %}
+      <li style="margin-bottom: 30px;">
+        <h2 style="margin: 0 0 5px 0; font-size: 1.5em;">
+          <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #333;">{{ post.title }}</a>
+        </h2>
+        <small style="color: #888;">{{ post.date | date: "%B %d, %Y" }}</small>
+        <p style="margin-top: 10px; color: #555;">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      </li>
+    {% empty %}
+      <li>No posts found yet!</li>
+    {% endfor %}
+  </ul>
+</div>
