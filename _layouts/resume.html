@@ -56,26 +56,42 @@
       {% if site.resume_section_experience %}
       <!-- begin Experience -->
       <section class="content-section">
-
         <header class="section-header">
           <h2>Experience</h2>
         </header>
+        
+        <div class="section-body">
+          {% for job in site.data.experience %}
+            <div class="resume-item" style="margin-bottom: 25px;">
+              
+              <!-- 1. Display Company with Link logic -->
+              <h3 class="resume-item-title" style="margin-bottom: 3px;">
+                {% if job.link %}
+                  <a href="{{ job.link }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                    {{ job.company }} <span style="font-size: 0.75em; color: #0076df; vertical-align: middle;">🔗</span>
+                  </a>
+                {% else %}
+                  {{ job.company }}
+                {% endif %}
+              </h3>
 
-        {% for job in site.data.experience %}
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3>
-            {% if job.link %}
-              <a href="{{ job.link }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">{{ job.company }} 🔗</a>
-            {% else %}
-              {{ job.company }}
-            {% endif %}
-          </h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
-        </div><!-- end of resume-item -->
-        {% endfor %}
+              <!-- 2. Display Role and Duration using native layout metadata structures -->
+              <div class="resume-item-details" style="margin-bottom: 8px; color: #666; font-size: 0.95em;">
+                <strong>{{ job.role }}</strong> &bull; {{ job.duration }}
+              </div>
+              
+              <!-- 3. Display Bullet Points from the array -->
+              <ul class="resume-item-description" style="margin-top: 5px; padding-left: 18px; line-height: 1.5; color: #333;">
+                {% for point in job.description %}
+                  <li style="margin-bottom: 5px;">{{ point }}</li>
+                {% endfor %}
+              </ul>
 
+            </div>
+          {% endfor %}
+        </div>
       </section>
+
       <!-- end Experience -->
       {% endif %}
 
