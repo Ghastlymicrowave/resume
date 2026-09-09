@@ -2,11 +2,38 @@
 layout: default
 ---
 <article style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
-  <h1>{{ page.title }}</h1>
-  <p><time>{{ page.date | date_to_string }}</time></p>
-  <hr>
-  <div class="entry">
+  <header style="margin-bottom: 20px;">
+    <h1 style="font-size: 2.5em; margin-bottom: 5px;">{{ page.title }}</h1>
+    <p style="color: #888;"><time>{{ page.date | date: "%B %d, %Y" }}</time></p>
+  </header>
+  
+  <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 30px;">
+
+  <div class="entry" style="line-height: 1.6; font-size: 1.1em; color: #333;">
     {{ content }}
   </div>
-  <p><a href="{{ site.baseurl }}/">← Back to Resume</a></p>
+
+  <hr style="border: 0; border-top: 1px solid #eee; margin-top: 40px; margin-bottom: 20px;">
+
+  <!-- Next / Previous Navigation Links -->
+  <nav style="display: flex; justify-content: space-between; margin-top: 20px; font-size: 1em;">
+    <div>
+      {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" style="text-decoration: none; color: #0076df;">
+          &larr; Older: {{ page.previous.title }}
+        </a>
+      {% endif %}
+    </div>
+    <div>
+      {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" style="text-decoration: none; color: #0076df;">
+          Newer: {{ page.next.title }} &rarr;
+        </a>
+      {% endif %}
+    </div>
+  </nav>
+
+  <p style="text-align: center; margin-top: 40px;">
+    <a href="{{ '/blog/' | relative_url }}" style="text-decoration: none; color: #666;">View All Posts</a>
+  </p>
 </article>
