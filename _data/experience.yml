@@ -1,19 +1,38 @@
-# Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+- company: "Code Ninjas"
+  role: "Assistant Director"
+  duration: "4/22 - 8/24"
+  description: 
+  - "Mentored as a programming instructor, guiding elementary to middle-school age children using java script, Lua, and C# within Unity andother game engines."
+  - "Supervised day-to-day operations to ensure quality in customer service, scheduling, safety, cleanliness, and weekly events."
+  link: "https://www.codeninjas.com"
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+- company: "Sheetz"
+  role: "Store Team Member"
+  duration: "1/25 - Current"
+  description: 
+  - "Fast, Efficent, and High-Dexterity work in a stressful and fast-paced work enviroment."
+  - "Complex Prioritization and Clear Communication amidst chaos."
+  - "Acomplishing tasks while maintaining customer service as a top priority."
+  link: "https://sheetz.com/"
 
+- company: "American College of Lifestyle Medicine"
+  role: "Intern - Data Science"
+  duration: "12/24 - 9/25"
+  description:
+  - "Assisting researchers by collaborating on improving SAS code and learning on-the-fly."
+  - "Becoming educated in the process of preforming medical research."
+  link: "https://lifestylemedicine.org/"
 
-# Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+- company: "Game Development Tutor"
+  role: "Self-Employed Tutor"
+  duration: "8/24 - Current"
+  description: 
+  - "1 on 1 tutoring to educate individuals on programming techniques and skills relating to the use of game engines."
+
+- company: "Freelance Game Developer"
+  role: "Asset and Code creation"
+  duration: "2024 - Current"
+  description:
+  - "Contributing to VFX, Technical art, Textures, Shaders, and Code for various games, typically using Unity or Unreal."
+  - "Released: USC Games: Bugnauts, Blindsight: War of the Wardens, Bloobo, Move Move Melon"
+  - "In development - Voxalia"
