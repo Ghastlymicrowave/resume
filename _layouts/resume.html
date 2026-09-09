@@ -19,10 +19,17 @@
         <!-- Your name is defined in the _config.yml file -->
         <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
 
-        <h3>
-          <a href="Ghastlymicrowave/resume/_assets/guinevere-vaughan_3-15-2026.pdf" class="general-button no-print">Resume Pdf</a>
-          <a href="{{ '/blog/' | relative_url }}" class="general-button">Blog</a>
-        </h3>
+        <div class="contact-actions" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+          <!-- Contact Me Button -->
+          <a href="mailto:{{ site.email }}" class="contact-button">Contact me</a>
+
+          <!-- Styled Resume PDF Button (Fixed Path) -->
+          <a href="{{ '/images/guinevere-vaughan_3-15-2026.pdf' | relative_url }}" class="contact-button" >Resume PDF</a>
+
+          <!-- Styled Blog Button -->
+          <a href="{{ '/blog/' | relative_url }}" class="contact-button">Blog</a>
+        </div>
+
 
         <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
         {% if site.display_header_contact_info == 'true' %}
